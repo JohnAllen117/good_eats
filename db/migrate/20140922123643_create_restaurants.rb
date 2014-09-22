@@ -5,7 +5,7 @@ class CreateRestaurants < ActiveRecord::Migration
       t.string :address, null: false
       t.string :city, null: false
       t.string :state, null: false
-      t.integer :zip_code, null: false
+      t.string :zip_code, null: false
       t.text :description
       t.string :category
     end
