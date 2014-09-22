@@ -1,0 +1,11 @@
+<h1>Welcome to <%= @restaurant.name %>, Category: <%= @restaurant.category%></h1>
+<p><%= "#{@restaurant.address} - #{@restaurant.city}, #{@restaurant.state} #{@restaurant.zip_code}"%></p>
+<p><%= @restaurant.description %></p>
+<h3>Reviews</h3>
+<%= link_to "New Review", new_restaurant_review_path(@restaurant.id) %>
+<ul>
+<% @reviews.each do |review| %>
+  <li><%= review.body %>- <%= review.rating %></li>
+<% end %>
+</ul>
+<%= link_to 'Back', restaurants_path %>

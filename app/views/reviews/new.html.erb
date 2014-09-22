@@ -1,0 +1,11 @@
+<%= form_for [@restaurant, @review] do |f| %>
+  <p>
+    <%= f.label :body %>
+    <%= f.text_field :body %>
+  </p>
+  <p>
+    <%= f.label :rating %>
+    <%= f.text_field :rating %>(Must be between 1-5)
+  </p>
+  <%= f.submit "submit" %>
+<% end %>
